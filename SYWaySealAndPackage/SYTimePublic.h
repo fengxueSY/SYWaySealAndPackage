@@ -30,7 +30,7 @@
  *
  *  @return 转换后的时间
  */
-+ (NSString *)timeFormatted:(NSInteger)totalSeconds;
++ (NSString *)timeFormatted:(double)totalSeconds;
 /**
  *  格林尼治时间时间转本地时间
  *
@@ -81,19 +81,19 @@
  *
  *  @return 当前年份
  */
-+ (NSInteger)getCurrentYear;
++ (double)getCurrentYear;
 /**
  *  获取当前月份
  *
  *  @return 当前月份
  */
-+ (NSInteger)getCurrentMonth;
++ (double)getCurrentMonth;
 /**
  *  获取毫秒数
  *
  *  @return 当前毫秒数
  */
-+ (NSInteger)getCurrentMillisecond;
++ (double)getCurrentMillisecond;
 /**
  *  获取day天后的日期(若day为负数,则为|day|天前的日期)
  *

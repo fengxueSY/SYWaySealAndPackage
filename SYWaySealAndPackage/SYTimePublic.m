@@ -42,7 +42,7 @@
     return [dateformatter stringFromDate:now];
 }
 #pragma mark -   秒数转具体本地日期
-+ (NSString *)timeFormatted:(NSInteger)totalSeconds{
++ (NSString *)timeFormatted:(double)totalSeconds{
     NSDate  *localeDate = [NSDate dateWithTimeIntervalSince1970:totalSeconds];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -62,7 +62,7 @@
     //    // 设置系统时区为本地时区
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     //    // 计算本地时区与 GMT 时区的时间差
-    NSInteger interval = [zone secondsFromGMT];
+    double interval = [zone secondsFromGMT];
     //    // 在 GMT 时间基础上追加时间差值，得到本地时间
     date = [date dateByAddingTimeInterval:-interval];
     NSTimeInterval timeStamp= [date timeIntervalSince1970];
@@ -70,7 +70,7 @@
 }
 
 #pragma mark -   获取当前年份
-+ (NSInteger)getCurrentYear {
++ (double)getCurrentYear {
     
     NSDate *now = [NSDate date];
     
@@ -83,7 +83,7 @@
 }
 
 #pragma mark -   获取当前月份
-+ (NSInteger)getCurrentMonth {
++ (double)getCurrentMonth {
     
     NSDate *now = [NSDate date];
     
@@ -94,7 +94,7 @@
     
 }
 #pragma mark -   获取毫秒数
-+ (NSInteger)getCurrentMillisecond{
++ (double)getCurrentMillisecond{
     
     UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
     
@@ -115,7 +115,7 @@
     // 设置系统时区为本地时区
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     // 计算本地时区与 GMT 时区的时间差
-    NSInteger interval = [zone secondsFromGMT];
+    double interval = [zone secondsFromGMT];
     // 在 GMT 时间基础上追加时间差值，得到本地时间
     NSDate *currentDate = [[NSDate date] dateByAddingTimeInterval:interval];
     return currentDate;
@@ -127,7 +127,7 @@
     // 设置系统时区为本地时区
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     // 计算本地时区与 GMT 时区的时间差
-    NSInteger interval = [zone secondsFromGMT];
+    double interval = [zone secondsFromGMT];
     NSDate *date = [inputFormatter dateFromString:time];
     // 在 GMT 时间基础上追加时间差值，得到本地时间
     date = [date dateByAddingTimeInterval:interval];
@@ -202,7 +202,7 @@
     
     NSDate *GMTTime = [dateFormatter dateFromString:gmtDateStr];
     NSTimeZone *tz = [NSTimeZone localTimeZone];
-    NSInteger seconds = [tz secondsFromGMTForDate: GMTTime];
+    double seconds = [tz secondsFromGMTForDate: GMTTime];
     return [NSDate dateWithTimeInterval: seconds sinceDate: GMTTime];
 }
 
