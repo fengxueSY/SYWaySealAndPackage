@@ -14,7 +14,6 @@
 #import "SYBigImageView.h"
 #import "SYCWayAlertView.h"
 #import "SYStringPublic.h"
-#import "SYTimePublic.h"
 #import "UIView+SYViewFrame.h"
 
 
