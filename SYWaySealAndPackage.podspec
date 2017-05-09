@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "SYWaySealAndPackage"
   s.version      = "0.0.1"
-  s.summary      = "常用方法的封装，减少导入的麻烦"
+  s.summary      = "封装方法"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
- 包括字符串处理，时间处理，放大图片，筛选等
+常用方法的封装，包括时间，字符串等
                    DESC
 
   s.homepage     = "https://github.com/fengxueSY/SYWaySealAndPackage"
@@ -92,7 +92,6 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "SYWaySealAndPackage/*.{h,m}"
-
   # s.public_header_files = "Classes/**/*.h"
 
 
