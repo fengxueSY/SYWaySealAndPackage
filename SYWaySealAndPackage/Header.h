@@ -3,7 +3,7 @@
 //  PresidentHelper
 //
 //  Created by 666gps on 2017/5/9.
-//  Copyright © 2017年 张俊辉. All rights reserved.
+//  Copyright © 2017年 666gps. All rights reserved.
 //
 
 #ifndef Header_h
